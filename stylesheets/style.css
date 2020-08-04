@@ -470,6 +470,7 @@ footer .social-media-container a i.fa-pinterest-square:hover {
   }
   main header .nav-wrapper .navigation-mobile {
     display: block;
+    /* ANIMATION */
   }
   main header .nav-wrapper .navigation-mobile .navigation {
     display: none;
@@ -498,8 +499,7 @@ footer .social-media-container a i.fa-pinterest-square:hover {
     -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
             box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   }
-  main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::before,
-  main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::after {
+  main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::before, main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::after {
     content: '';
     position: absolute;
     width: 30px;
@@ -510,12 +510,27 @@ footer .social-media-container a i.fa-pinterest-square:hover {
             box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
   }
   main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::before {
-    -webkit-transform: translateY(-6px);
-            transform: translateY(-6px);
+    -webkit-transform: translateY(-7px);
+            transform: translateY(-7px);
   }
   main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger::after {
-    -webkit-transform: translateY(6px);
-            transform: translateY(6px);
+    -webkit-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger {
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger::before {
+    -webkit-transform: rotate(45deg) translate(10px, -10px);
+            transform: rotate(45deg) translate(10px, -10px);
+  }
+  main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger::after {
+    -webkit-transform: rotate(-45deg) translate(10px, 10px);
+            transform: rotate(-45deg) translate(10px, 10px);
   }
 }
 /*# sourceMappingURL=style.css.map */

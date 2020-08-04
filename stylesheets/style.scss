@@ -493,25 +493,41 @@ footer {
                 background: #fff;
                 border-radius: 5px;
                 box-shadow: 0 2px 5px rgba(255,101,47,.2);
-              }
 
-              .menu-btn-burger::before,
-              .menu-btn-burger::after {
-                content: '';
-                position: absolute;
-                width: 30px;
-                height: 3px;
-                background: #fff;
-                border-radius: 5px;
-                box-shadow: 0 2px 5px rgba(255,101,47,.2);
-              }
+                &::before, &::after {
+                  content: '';
+                  position: absolute;
+                  width: 30px;
+                  height: 3px;
+                  background: #fff;
+                  border-radius: 5px;
+                  box-shadow: 0 2px 5px rgba(255,101,47,.2);
+                }
 
-              .menu-btn-burger::before {
-                transform: translateY(-6px);
-              }
+                &::before {
+                  transform: translateY(-7px);
+                }
 
-              .menu-btn-burger::after {
-                transform: translateY(6px);
+                &::after {
+                  transform: translateY(7px);
+                }
+              }
+            }
+
+            /* ANIMATION */
+            .menu-btn.open {
+              .menu-btn-burger {
+                transform: translateX(-15px);
+                background: transparent;
+                box-shadow: none;
+
+                &::before {
+                  transform: rotate(45deg) translate(10px, -10px);
+                }
+  
+                &::after {
+                  transform: rotate(-45deg) translate(10px, 10px);
+                }
               }
             }
           }
