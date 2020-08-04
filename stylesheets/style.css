@@ -518,19 +518,21 @@ footer .social-media-container a i.fa-pinterest-square:hover {
             transform: translateY(7px);
   }
   main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger {
-    -webkit-transform: translateX(-15px);
-            transform: translateX(-15px);
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
     background: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
+    -webkit-transition: none;
+    transition: none;
   }
   main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger::before {
-    -webkit-transform: rotate(45deg) translate(10px, -10px);
-            transform: rotate(45deg) translate(10px, -10px);
+    -webkit-transform: rotate(45deg) translate(0px, 0px);
+            transform: rotate(45deg) translate(0px, 0px);
   }
   main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger::after {
-    -webkit-transform: rotate(-45deg) translate(10px, 10px);
-            transform: rotate(-45deg) translate(10px, 10px);
+    -webkit-transform: rotate(-45deg) translate(0px, 0px);
+            transform: rotate(-45deg) translate(0px, 0px);
   }
 }
 /*# sourceMappingURL=style.css.map */

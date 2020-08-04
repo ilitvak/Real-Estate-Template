@@ -517,16 +517,17 @@ footer {
             /* ANIMATION */
             .menu-btn.open {
               .menu-btn-burger {
-                transform: translateX(-15px);
+                transform: translateX(0px);
                 background: transparent;
                 box-shadow: none;
+                transition: none;
 
                 &::before {
-                  transform: rotate(45deg) translate(10px, -10px);
+                  transform: rotate(45deg) translate(0px, -0px);
                 }
   
                 &::after {
-                  transform: rotate(-45deg) translate(10px, 10px);
+                  transform: rotate(-45deg) translate(0px, 0px);
                 }
               }
             }
