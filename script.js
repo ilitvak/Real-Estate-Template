@@ -65,15 +65,24 @@ $(document).ready(function(){
 /******************************************/
 
 const menuBtn = document.querySelector('.menu-btn');
+const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
+const navigationCenter = document.querySelector('.navigation-center');
 let menuOpen = false;
 
 $(menuBtn).click(function(e){
     e.preventDefault();
     if(!menuOpen){
         menuBtn.classList.add('open');
+        overlay.classList.add('on');
+        body.classList.add('mobile-on');
+        navigationCenter.classList.add('turn-on')
         menuOpen = true;
     } else {
         menuBtn.classList.remove('open');
+        overlay.classList.remove('on');
+        body.classList.remove('mobile-on');
+        navigationCenter.classList.remove('turn-on')
         menuOpen = false;
     }
 })

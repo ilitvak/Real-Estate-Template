@@ -12,6 +12,11 @@
   transition: all .5s;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html, body {
@@ -121,6 +126,14 @@ main header .nav-wrapper .nav-items {
 }
 
 main header .nav-wrapper .navigation-mobile {
+  display: none;
+}
+
+main header .nav-wrapper .navigation-mobile .overlay {
+  display: none;
+}
+
+main header .nav-wrapper .navigation-center {
   display: none;
 }
 
@@ -378,7 +391,7 @@ footer .large-form-container {
 }
 
 footer .large-form-container .box {
-  width: 50%;
+  width: 800px;
   padding: 5% 10%;
   margin: 0 auto;
   border-radius: 20px;
@@ -464,7 +477,14 @@ footer .social-media-container a i.fa-pinterest-square:hover {
 }
 
 /* Portrait and Landscape */
-@media only screen and (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1) {
+@media only screen and (max-width: 1024px) {
+  body.mobile-on {
+    position: fixed;
+    width: 100%;
+  }
+  main header .nav-wrapper a {
+    z-index: 200;
+  }
   main header .nav-wrapper .nav-items {
     display: none;
   }
@@ -472,8 +492,34 @@ footer .social-media-container a i.fa-pinterest-square:hover {
     display: block;
     /* ANIMATION */
   }
-  main header .nav-wrapper .navigation-mobile .navigation {
-    display: none;
+  main header .nav-wrapper .navigation-mobile .navigation-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 150;
+  }
+  main header .nav-wrapper .navigation-mobile .navigation-center .nav-items {
+    display: block;
+  }
+  main header .nav-wrapper .navigation-mobile .navigation-center .nav-items li {
+    text-align: center;
+    margin: 75px 0;
+  }
+  main header .nav-wrapper .navigation-mobile .navigation-center.turn-on {
+    display: block;
+  }
+  main header .nav-wrapper .navigation-mobile .overlay.on {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.8;
+    z-index: 100;
   }
   main header .nav-wrapper .navigation-mobile .menu-btn {
     position: relative;
@@ -490,6 +536,7 @@ footer .social-media-container a i.fa-pinterest-square:hover {
     height: 40px;
     cursor: pointer;
     border-radius: 3px;
+    z-index: 150;
   }
   main header .nav-wrapper .navigation-mobile .menu-btn .menu-btn-burger {
     width: 30px;
@@ -533,6 +580,9 @@ footer .social-media-container a i.fa-pinterest-square:hover {
   main header .nav-wrapper .navigation-mobile .menu-btn.open .menu-btn-burger::after {
     -webkit-transform: rotate(-45deg) translate(0px, 0px);
             transform: rotate(-45deg) translate(0px, 0px);
+  }
+  footer .large-form-container .box {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
